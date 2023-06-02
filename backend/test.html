@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <form action="/procesar_pago" method="POST">
+    <input type="text" name="nombre_titular" placeholder="Nombre del titular">
+    <input type="text" name="numero_tarjeta" placeholder="Número de tarjeta">
+    <input type="text" name="exp_mes" placeholder="MM">
+    <input type="text" name="exp_anio" placeholder="AA">
+    <input type="text" name="cvc" placeholder="CVC">
+    <button type="submit">Pagar</button>
+  </form>
+
+  <script>
+    var stripe = Stripe('pk_test_51NEMXLEUYV0GDpXA77uvChyhOk4ga9Www2iFZQBJaUwB4P89UJSJJWFHAd4wNwHrBZYRjSR9GqLlDwZaR6aiA72l00i1yuKyMh');
+
+    var form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      stripe.createToken('card', {
+        name: document.querySelector('input[name=nombre_titular]').value,
+        number: document.querySelector('input[name=numero_tarjeta]').value,
+        exp_month: document.querySelector('input[name=exp_mes]').value,
+        exp_year: document.querySelector('input[name=exp_anio]').value,
+        cvc: document.querySelector('input[name=cvc]').value
+      }).then(function(result) {
+        if (result.error) {
+          // Manejar errores de validación del formulario
+          console.error(result.error.message);
+        } else {
+          // Enviar el token de tarjeta al backend
+          fetch('/procesar_pago', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ token: result.token.id })
+          }).then(function(response) {
+            return response.json();
+          }).then(function(data) {
+            // Manejar la respuesta del backend
+            console.log(data);
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
