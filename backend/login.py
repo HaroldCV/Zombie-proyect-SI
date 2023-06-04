@@ -5,6 +5,8 @@ import psycopg2
 import psycopg2.extras
 from werkzeug.security import generate_password_hash, check_password_hash
 import paypalrestsdk
+import os
+import requests
 
 app = Flask(__name__)
 CORS(app)
@@ -21,7 +23,7 @@ conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_
 def login():
     cursor = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
 
-    # Verificar si existen las solicitudes POST "username" y "password"
+    # Verificar existen las solicitudes POST "username" y "password"
     if 'username' in request.json and 'password' in request.json:
         username = request.json['username']
         password = request.json['password']
@@ -115,7 +117,35 @@ def create_payment():
         return payment.to_dict()
     else:
         return {"error": payment.error}
+    
+mapbox_access_token = 'pk.eyJ1IjoiZGVtb24yMTM4IiwiYSI6ImNsaWdrazVoYjFpeXMzZ21teHE5eWVvN3kifQ.0aNpCXwwZFb_aWqSDR7bhQ'
 
+@app.route('/coordinates', methods=['GET'])
+def get_coordinates():
+    coordinates = {'lat': -12.0464, 'lng': -77.0428}  # Coordenadas de Lima, Perú
+    return jsonify({'coordinates': coordinates, 'mapbox_access_token': mapbox_access_token})
+
+
+@app.route('/districts', methods=['GET'])
+def get_districts():
+    districts = [
+        {'name': 'San Miguel', 'color': 'red'},
+        {'name': 'Jesús María', 'color': 'green'},
+        {'name': 'Magdalena del Mar', 'color': 'blue'}
+        # Agrega más distritos y colores según sea necesario
+    ]
+
+    district_coordinates = {}
+
+    # Realiza una solicitud a la API de Mapbox para obtener las coordenadas de cada distrito
+    for district in districts:
+        name = district['name']
+        response = requests.get(f'https://api.mapbox.com/geocoding/v5/mapbox.places/{name}.json?access_token={mapbox_access_token}')
+        data = response.json()
+        coordinates = data['features'][0]['geometry']['coordinates']
+        district['coordinates'] = coordinates
+
+    return jsonify({'districts': districts})
 
 if __name__ == "__main__":
     app.run(debug=True)
