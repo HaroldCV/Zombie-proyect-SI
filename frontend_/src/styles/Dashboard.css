@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+
+.main-title {
+   width: 100%;
+   font-size: 80px;
+   text-align: center;
+   font-family: "Staatliches";
+   padding: 50px;
+}
+
+
+.map-title {
+   width: 100%;
+   font-family: "Bungee";
+   text-align: center;
+   font-size: 40px;
+   letter-spacing: 5px;
+}
+
+
+.map-container {
+   margin-top: 20px;
+   margin-bottom: 60px;
+   padding: 30px;
+   border-radius: 25px;
+   background-color: #054e8f;
+}
