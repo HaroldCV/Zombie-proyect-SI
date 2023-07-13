@@ -7,9 +7,6 @@ import "./../styles/About.css"
 const main_about = require("./../assets/NY-Dv2.jpg")
 const big_logo = require("./../assets/main_logo.png")
 
-
-
-
 const About = () => {
    const navigate = useNavigate();
 
