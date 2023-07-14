@@ -1,0 +1,113 @@
+.main-wrapper-1 {
+    min-height: 170vh;
+    width: 100%;
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ .left-about {
+    padding: 30px 30px;
+ }
+ 
+ .right-about {
+    max-width: 45%;
+    padding: 30px 60px;
+ }
+ 
+ /* ----- On Cards ----- */
+ 
+ .cards-wrapper {
+    padding: 30px;
+    margin-top: 50px;
+ }
+ 
+ .row {
+    padding: 60px;
+    padding-bottom: 150px;
+ }
+ 
+ .card-body {
+    background-color: aliceblue;
+ }
+ 
+ /* ----- Msg / texts ----- */
+ 
+ .mid-tittle {
+    font-family: "Bungee";
+    text-align: center;
+    letter-spacing: 5px;
+ 
+    padding: 25px;
+    width: 100%;
+    background-color: #20DD20;
+ }
+ 
+ .msg-1 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    color: #054e8f;
+    letter-spacing: 1.5px;
+    line-height: 35px;
+    /* margin-bottom: 40px; */
+    margin-top: 30px;
+ }
+ 
+ .card-body .msg {
+    font-size: 20px;
+    letter-spacing: 1.5px;
+ }
+ 
+ /* ----- Images ------ */
+ 
+ .about-image-1 {
+    width: 100%;
+    border-radius: 30px;
+ }
+ 
+ .logo-image {
+    filter: brightness(1.5);
+    mix-blend-mode: multiply;
+    transform: translate(35%, 0%);
+ }
+ 
+ /* ------ Responsive ------ */
+ @media (max-width: 1350px) {
+ 
+    /* ----- Images ------ */
+    
+    .logo-image {
+       filter: brightness(1.5);
+       mix-blend-mode: multiply;
+       transform: translate(0%, 0%);
+    }
+ 
+    .about-image-1 {
+       margin-top: 100px;
+       width: 100%;
+       border-radius: 30px;
+    }
+ 
+    /* ----- Sides ------ */
+    .left,
+    .right-about {
+        width: 100%;
+        max-width: 100%;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    .right-about {
+        font-size: 0.8em;
+    }
+ 
+    .right-about * {
+        width: 95%;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+ }
+ 

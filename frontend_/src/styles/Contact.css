@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+.main-wrapper-2 {
+   min-height: 185vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.left-contact {
+   max-width: 55%;
+   padding: 20px 60px;
+}
+
+.right-contact {
+   padding: 20px 60px;
+}
+
+/* ------ Arrow ----- */
+
+.arrow-1 {
+   border: solid #7CD7C2;
+   border-width: 0px 30px 25px 0;
+   display: inline-block;
+   padding: 15px;
+
+   transform: rotate(-45deg);
+   -webkit-transform: rotate(-45deg);
+
+   margin-right: 30px;
+}
+
+/* ------ Texts ----- */
+
+.msg-4 {
+   text-align: justify;
+   font-size: 25px;
+   font-weight: 600;
+   color: #054e8f;
+   letter-spacing: 1.5px;
+   line-height: 35px;
+   padding-bottom: 30px;
+}
+
+.msg-indicator {
+   color: #20DD20;
+   font-family: "Bungee";
+   font-size: 35px;
+}
+
+.msg-indicator span {
+   font-family: "Staatliches";
+   padding-left: 50px;
+}
+
+.msg-indicator-1 {
+   color: #20DD20;
+   font-family: "Bungee";
+   font-size: 35px;
+   text-align: center;
+   letter-spacing: 5px;
+}
+
+.msg-contact {
+   text-align: center;
+   font-size: 22.5px;
+   font-weight: 500;
+   color: #054e8f;
+   font-family: "Staatliches";
+   letter-spacing: 2px;
+}
+
+.big-contact-title {
+   text-align: center;
+   font-size: 80px;
+   font-weight: 700;
+   font-family: "Staatliches";
+   letter-spacing: 10px;
+   color: #054e8f;
+   padding: 0px;
+}
+
+.contact-tittle {
+   font-family: "Bungee";
+   text-align: center;
+   letter-spacing: 5px;
+   padding: 15px;
+   width: 100%;
+
+   color: #20DD20;
+   background-color: #054e8f;
+}
+
+/* ------ Figures ------ */
+
+.redes img {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   width: 80%;
+}
+
+.text {
+   width: 100%;
+   text-align: center;
+
+   font-size: 25px;
+   font-weight: 700;
+   color: #054e8f;
+   font-family: "Staatliches";
+   letter-spacing: 2.5px;
+
+   padding: 25px;
+}
+
+.down-text {
+   width: 100%;
+   text-align: center;
+
+   font-size: 25px;
+   font-weight: 400;
+   color: #054e8f;
+   font-family: "Staatliches";
+
+   padding: 15px;
+}
+
+/* ------ Responsive ------ */
+
+@media (max-width: 1350px) {
+
+   .arrow-1 {
+       display: none;
+   }
+ 
+   /* ----- Sides ------ */
+   .left-contact,
+   .right-contact {
+       width: 100%;
+       max-width: 100%;
+       padding: 24px;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+
+   .right-contact {
+       font-size: 0.8em;
+   }
+
+   .right-contact * {
+       width: 95%;
+       margin-bottom: 32px;
+       text-align: center;
+   }
+
+   .msg-4 {
+       font-size: 20px;
+       padding: 20px;
+       margin-top: 100px;
+   }
+}

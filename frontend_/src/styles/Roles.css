@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+.all-roles-wrapper {
+    width: 100%;
+}
+
+.roles-wrapper {
+    width: 100%;
+    padding: 50px;
+    margin-top: 100px;
+}
+
+.roles-grid-wrapper {
+    display: grid;
+    grid-template-columns: 16% 17% 17% 17% 17% 16%;
+}
+ 
+.roles-grid-wrapper > div {
+    /* background: #eee; */
+    padding: 1em;
+}
+
+.roles-grid-wrapper > div:nth-child(odd) {
+    /* background: #ddd; */
+}
+
+/* ------ SQUARES ------ */
+
+.roles-small-rectangle-1 {
+    display: block;
+    border-radius: 20px;
+    height: 150px;
+    background-color: #E2E2E2;
+    margin-top: 0px;
+}
+
+.roles-small-rectangle-1-blue {
+    display: block;
+    border-radius: 20px;
+    height: 150px;
+    background-color: #054E6F;
+    margin-top: 0px;
+}
+
+.roles-large-rectangle-1 {
+    display: block;
+    border-radius: 20px;
+    height: 350px;
+    background-color: #20DD20;
+    margin-top: 20px;
+}
+
+.roles-small-rectangle-2-blue {
+    display: block;
+    border-radius: 20px;
+    height: 250px;
+    background-color: #7CD7C2;
+    margin-top: 0px;
+}
+
+.roles-small-rectangle-2-grey {
+    display: block;
+    border-radius: 20px;
+    height: 250px;
+    background-color: #E2E2E2;
+    margin-top: 20px;
+}
+
+.roles-small-rectangle-2-grey-v {
+    display: block;
+    border-radius: 20px;
+    height: 250px;
+    background-color: #E2E2E2;
+    margin-top: 0px;
+}
+
+.roles-small-rectangle-2-bblue {
+    display: block;
+    border-radius: 20px;
+    height: 250px;
+    background-color: #054E6F;
+    margin-top: 20px;
+}
+
+.roles-large-rectangle-1-blue {
+    display: block;
+    border-radius: 20px;
+    height: 350px;
+    background-color: #7CD7C2;
+    margin-top: 20px;
+}
+
+/* TITTLES */
+
+.little-tittle-black {
+    color: black;
+    font-size: 22.5px;
+    text-align: center;
+    padding-top: 40px;
+    font-weight: 600;
+}
+
+.little-tittle-white {
+    color: white;
+    font-size: 22.5px;
+    text-align: center;
+    padding-top: 50px;
+    font-weight: 600;
+}
+
+.mid-tittle-black {
+    color: black;
+    font-size: 22.5px;
+    text-align: center;
+    padding-top: 150px;
+    font-weight: 600;
+}
+
+.mid-tittle-white {
+    color: white;
+    font-size: 22.5px;
+    text-align: center;
+    padding-top: 150px;
+    font-weight: 600;
+}
+
+.roles-big-title {
+    font-size: 100px;
+    font-weight: 800;
+    text-align: right;
+    letter-spacing: 15px;
+    padding-right: 10px;
+}
+
+.roles-big-title .first-1 {
+    color: #054E6F;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 7.5px;
+}
+
+.roles-big-title .second-1 {
+    color: #7CD7C2;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 7.5px;
+}
+
+/* ----- PADRES DE FAMILIA ----- */
+
+.skyblue-all-wrapper {
+    width: 100%;
+    background-color: #7CD7C2;
+}
+
+.all-roles-tittle {
+    text-align: center;
+    font-family: Staatliches;
+    font-size: 60px;
+    letter-spacing: 5px;
+    padding: 30px;
+    background-color: white;
+
+    margin-top: 100px;
+}
+
+.all-roles-text-wrapper {
+    padding: 100px;
+}
+
+.all-roles-text-wrapper p {
+    text-align: justify;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* ----- INGENIERO ----- */
+
+.all-roles-tittle-yw {
+    text-align: center;
+    font-family: Staatliches;
+    font-size: 60px;
+    letter-spacing: 5px;
+    padding: 30px;
+    color: #FBBC05;
+    background-color: white;
+
+    margin-top: 100px;
+}

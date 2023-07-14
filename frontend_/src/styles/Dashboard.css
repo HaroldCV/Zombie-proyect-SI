@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+.main-title {
+   width: 100%;
+   font-size: 80px;
+   text-align: center;
+   font-family: "Staatliches";
+   padding: 50px;
+}
+
+/*
+.menu-list .always-active-db {
+   font-weight: bold;
+   text-transform: uppercase;
+   background-color: #FF4040;
+}
+*/
+
+button {
+   margin-top: 10px;
+}
+
+/* ----- */
+
+.all-dashboard-wrapper {
+   width: 100%;
+}
+
+.dashboard-wrapper {
+   width: 100%;
+   padding: 100px;
+   margin-top: 100px;
+}
+
+.grid-wrapper {
+   display: grid;
+   grid-template-columns: 35% 30% 35%;
+}
+
+.grid-wrapper > div {
+   /* background: #eee; */
+   padding: 1em
+}
+
+.grid-wrapper > div:nth-child(odd) {
+   /* ackground: #ddd; */
+}
+
+.nested {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 10px;
+}
+
+.nested > div {
+   display: block;
+   border-radius: 20px;
+   background-color: #7CD7C2;
+   margin-top: 10px;
+}
+
+/* ----- SQUARES ----- */
+
+.big-square-l {
+   display: block;
+   border-radius: 20px;
+   height: 400px;
+   background-color: #054e8f;
+   margin-top: 10px;
+}
+
+.small-rectangle-l {
+   display: block;
+   border-radius: 20px;
+   height: 100px;
+   background-color: #20DD20;
+   margin-top: 10px;
+}
+
+.big-square-2 {
+   display: block;
+   border-radius: 20px;
+   height: 400px;
+   background-color: #FFD900;
+   margin-top: 10px;
+}
+
+.small-rectangle-2 {
+   display: block;
+   border-radius: 20px;
+   height: 100px;
+   background-color: #054e8f;
+   margin-top: 10px;
+}
+
+/* ----- TITTLES ----- */
+
+.fg-1-tittle {
+   font-family: Staatliches;
+   font-size: 50px;
+   color: white;
+   text-align: start;
+   padding-top: 240px;
+   padding-left: 25px;
+}
+
+.fg-2-tittle, .sg-1-tittle {
+   font-family: Staatliches;
+   font-size: 70px;
+   color: white;
+   float: right;
+   padding-right: 25px;
+}
+
+.sg-2-tittle {
+   font-family: Staatliches;
+   font-size: 70px;
+   color: #054e8f;
+   padding-top: 275px;
+   padding-left: 35px;
+}
+
+.little-tittle {
+   font-family: Staatliches;
+   font-size: 22.5px;
+   color: black;
+   text-align: center;
+   padding: 170px 5px 5px 0px;
+}
+
+.big-title {
+   font-size: 80px;
+   font-weight: 800;
+   text-align: left;
+   letter-spacing: 10px;
+   padding-left: 10px;
+}
+
+/* ----- FIGURES ----- */
+
+.big-title .arrow {
+   border: solid #FBBC05;
+   border-width: 0px 30px 30px 0;
+   display: inline-block;
+   padding: 20px;
+   transform: rotate(-45deg);
+   -webkit-transform: rotate(-45deg);
+}
+
+/* ---------------------- Fundamentos ----------------------*/
+
+.fundamentos-wrapper {
+   width: 100%;
+   background-color: #054e6f;
+}
+
+.fundamentos-tittle {
+   margin-top: 100px;
+   font-size: 60px;
+   font-family: Bungee;
+   text-align: center;
+   padding: 60px;
+   background-color: white;
+}
+
+.text-wrapper {
+   width: 100%;
+   padding: 100px;
+}
+
+.fundamentos-text {
+   width: 70%;
+}
+
+.fundamentos-text p {
+   color: white;
+   text-align: justify;
+   font-size: 20px;
+   letter-spacing: 2px;
+}
+
+/* ---------------------- Mapa ----------------------*/
+
+.all-map-wrapper {
+   width: 100%;
+}
+
+.map-wrapper {
+   padding: 100px;
+}
+
+.map-title {
+   width: 100%;
+   font-family: "Bungee";
+   text-align: center;
+   font-size: 60px;
+   padding: 20px;
+   letter-spacing: 5px;
+}
+
+.map-container {
+   padding: 60px;
+   border-radius: 25px;
+   background-color: #054e8f;
+}
+
+/* ---------------------- Gestor ----------------------*/
+
+.gestor-tittle {
+   margin-top: 100px;
+   font-size: 40px;
+   font-family: Bungee;
+   text-align: center;
+   padding: 60px;
+   background-color: white;
+}
+
+.gestor-text {
+   width: 100%;
+}
+
+.gestor-text p {
+   color: white;
+   text-align: justify;
+   font-size: 20px;
+   letter-spacing: 1.5px;
+}
+
+/* ---------------------- Zonas ----------------------*/
+
+.aprender-text {
+   width: 70%;
+}
+
+.aprender-text p {
+   color: white;
+   text-align: justify;
+   font-size: 20px;
+   letter-spacing: 1.5px;
+}
+
+/* ---------------------- Game ----------------------*/
+
+.game-text p {
+   color: black;
+   font-size: 25px;
+   text-align: center;
+}
