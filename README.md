@@ -22,6 +22,8 @@ Before you start the FrontEnd by ReactJS, you should execute the following comma
 
 #### `npm i mapbox-gl`
 
+#### `npm i react-stripe-checkout`
+
 #### `npm start`
 
 Finally, this will run the app in the development mode.\
